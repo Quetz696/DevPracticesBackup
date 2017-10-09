@@ -19,9 +19,9 @@ def cleanhtml(raw_html):
   cleantext = re.sub(cleanr, '', raw_html)
   return cleantext
 
-username = 'rftb.dev@gmail.com'
-ww = 'az7GQIOTBI2qd163vrUTJGwuNBpGk0rilJr8XSWh61ikWKDf3AngUQ'
-frompassw = 'eentrein'
+username = ''
+ww = ''
+frompassw = ''
 baseUrl = 'http://webservices.ns.nl/ns-api-storingen?station=Apeldoorn&actual=true&unplanned=true'
 resp = requests.get(baseUrl, auth=(username, ww))
 respcontent = resp.content
