@@ -1,0 +1,15 @@
+HTTP/1.1 404 Not Found
+Server: nginx
+Date: Fri, 08 Sep 2017 13:28:44 GMT
+Content-Type: text/html; charset=UTF-8
+Content-Length: 162
+Connection: close
+Vary: Accept-Encoding
+
+<html>
+<head><title>404 Not Found</title></head>
+<body bgcolor="white">
+<center><h1>404 Not Found</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
