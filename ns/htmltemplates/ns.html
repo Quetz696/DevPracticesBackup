@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:py="http://genshi.edgewall.org/"
+   xmlns:i18n="http://genshi.edgewall.org/i18n"
+   xmlns:xi="http://www.w3.org/2001/XInclude"
+
+    >
+  <head>
+
+  </head>
+  <body>
+    <h2 style="background-color: yellow">storingen:</h2>
+    <ul>
+        <li style="list-style-type:none" py:for="m in message">
+            <div py:if="m.unscheduled">
+              <p style="background-color: red;font-size: 20px;" >${m.state + " storing op traject: " + m.traject}
+                <br> ${ m.reden} </br>
+              </p>
+              <p> ${m.bericht}
+              </p>
+            </div>
+            <div py:if="m.scheduled">
+              <p>${m.state + " storing op traject: " + m.traject}
+                <br> ${"Voor de periode "+ m.periode} </br>
+              </p>
+              <p> ${m.bericht}
+              </p>
+            </div>
+            <!-- <span py:when="m.unscheduled">Gepland</span> -->
+
+        </li>
+      </ul>
+    <pre>
+      ${'\n'.join(m.state + " storing op traject: " + m.traject + "\n\tfor periode:\t" + m.periode + "\nbericht: "+ m.bericht + "\n" for m in message)}
+    </pre>
+  </body>
+</html>
